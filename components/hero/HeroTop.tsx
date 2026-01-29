@@ -1,7 +1,7 @@
 import { BadgePercent, Check, Smartphone, Wifi } from "lucide-react"
 import { Button } from "../ui/button"
 
-function Index() {
+export default function HeroTop() {
   return (
     <div className="border-b-2">
       <div className="py-12 text-white bg-default-purple lg:bg-[url('/background-vivo.jpg')] lg:bg-center">
@@ -42,5 +42,3 @@ function Index() {
     </div>
   )
 }
-
-export default Index

@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-function Index() {
+export default function Benefits() {
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <div>
@@ -29,5 +29,3 @@ function Index() {
     </div>
   )
 }
-
-export default Index

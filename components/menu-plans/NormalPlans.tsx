@@ -7,7 +7,7 @@ import { Switch } from "../ui/switch"
 import { Button } from "../ui/button"
 import { useRouter } from "next/navigation"
 
-function Index() {
+export default function NormalPlans() {
   const [menuOption, setMenuOption] = useState('novaLinha')
   const mockedPlans = [
     {
@@ -150,5 +150,3 @@ function Index() {
     </div>
   )
 }
-
-export default Index
