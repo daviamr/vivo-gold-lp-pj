@@ -1,10 +1,12 @@
 import HeroTop from '../components/hero/HeroTop'
 import NormalPlans from '../components/menu-plans/NormalPlans'
 import Benefits from '../components/benefits/Benefits'
+import ModalPfPj from '../components/modal-pf-pj/ModalPfPj'
 
 function Index() {
   return (
     <div>
+      <ModalPfPj/>
       <HeroTop />
 
       <div className='container m-auto px-4'>
