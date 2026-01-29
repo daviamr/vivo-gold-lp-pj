@@ -10,14 +10,13 @@ export const metadata: Metadata = {
   icons: '/favicon.ico'
 };
 
-export default async function TypePersonLayout({ children, params }: PersonLayoutProps) {
-  const { typePerson } = await params
+export default async function DefaulyLayout({ children }: PersonLayoutProps) {
   return (
     <>
       <html lang="pt-br">
         <body>
           <ConditionalModal />
-          <Header typePerson={typePerson} />
+          <Header />
           <DefaultLayout>
             {children}
           </DefaultLayout>
@@ -29,5 +28,4 @@ export default async function TypePersonLayout({ children, params }: PersonLayou
 
 type PersonLayoutProps = {
   children: React.ReactNode,
-  params: Promise<{ typePerson: string }>
 }
