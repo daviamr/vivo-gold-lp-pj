@@ -7,21 +7,22 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Vivo Fibra - A Melhor Internet Banda Larga da América Latina',
   description: 'A Melhor Internet Banda Larga da América Latina',
-  icons: '/favicon.ico'
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ 
+  children 
+}: { 
+  children: React.ReactNode 
+}) {
   return (
-    <>
-      <html lang="pt-br">
-        <body>
-          <ConditionalModal />
-          <Header />
-          <DefaultLayout>
-            {children}
-          </DefaultLayout>
-        </body>
-      </html>
-    </>
+    <html lang="pt-br">
+      <body>
+        <ConditionalModal />
+        <Header />
+        <DefaultLayout>
+          {children}
+        </DefaultLayout>
+      </body>
+    </html>
   )
 }
