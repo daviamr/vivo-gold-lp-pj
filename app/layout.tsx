@@ -17,11 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <ConditionalModal />
-        <Header />
-        <DefaultLayout>
-          {children}
-        </DefaultLayout>
+teste2
       </body>
     </html>
   )
