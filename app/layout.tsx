@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   icons: '/favicon.ico'
 };
 
-export default async function DefaulyLayout({ children }: PersonLayoutProps) {
+export default function DefaulyLayout({ children }: PersonLayoutProps) {
   return (
     <>
       <html lang="pt-br">

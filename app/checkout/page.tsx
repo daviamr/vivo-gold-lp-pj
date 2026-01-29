@@ -109,7 +109,6 @@ function Index() {
   const { formState: { errors }, setValue, control, register } = form
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
     const customer = localStorage.getItem('customer')
     if (customer) {
       setCustomerData(JSON.parse(customer))
@@ -118,7 +117,6 @@ function Index() {
   }, [step])
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
     const customer = localStorage.getItem('customer')
     if (customer) {
       setCustomerData(JSON.parse(customer))
@@ -225,7 +223,7 @@ function Index() {
         primaryTel: data.primaryTel,
         secondaryTel: data.secondaryTel,
         termsOfUse: data.termsOfUse,
-        url: typeof window !== 'undefined' ? window.location.href : ''
+        url: window.location.href
       }
       dataToSave = { ...customerData, fourthStepData }
       const isValid = validateStep4(data, form.setError, form.clearErrors)
