@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   icons: '/favicon.ico'
 };
 
-export default function DefaulyLayout({ children }: PersonLayoutProps) {
+export default function RootLayout({ children }: RootProps) {
   return (
     <>
       <html lang="pt-br">
@@ -26,6 +26,6 @@ export default function DefaulyLayout({ children }: PersonLayoutProps) {
   )
 }
 
-type PersonLayoutProps = {
+type RootProps = {
   children: React.ReactNode,
 }
