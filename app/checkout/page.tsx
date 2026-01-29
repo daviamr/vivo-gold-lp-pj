@@ -1,5 +1,5 @@
 'use client'
-
+export const dynamic = 'force-dynamic'
 import { useEffect, useState } from "react"
 import CheckoutSteps from '../../components/checkout-steps/CheckoutSteps'
 import { Label } from "@/components/ui/label"
