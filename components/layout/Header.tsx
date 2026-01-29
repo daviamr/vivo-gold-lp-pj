@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import MenuMobile from '../menu-mobile/MenuMobile'
 
-function Index() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [person, setPerson] = useState('pj')
 
@@ -44,5 +44,3 @@ function Index() {
     </header>
   )
 }
-
-export default Index

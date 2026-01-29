@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from '../components/layout/Header'
 import DefaultLayout from '../components/layout/DefaultLayout'
+import ConditionalModal from "../components/conditional-modal/ConditionalModal";
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -9,21 +10,18 @@ export const metadata: Metadata = {
   icons: '/favicon.ico'
 };
 
-export default function RootLayout({ children }: RootProps) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <>
       <html lang="pt-br">
-        <body className="relative">
-          <DefaultLayout>
+        <body>
+          <ConditionalModal />
           <Header />
+          <DefaultLayout>
             {children}
           </DefaultLayout>
         </body>
       </html>
     </>
   )
-}
-
-type RootProps = {
-  children: React.ReactNode,
 }

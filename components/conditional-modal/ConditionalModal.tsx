@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import ModalPfPj from '../modal-pf-pj/ModalPfPj'
 
-function Index() {
+export default function ConditionalModal() {
   const pathname = usePathname()
 
   const conditional =
@@ -15,5 +15,3 @@ function Index() {
 
   return <ModalPfPj />
 }
-
-export default Index
