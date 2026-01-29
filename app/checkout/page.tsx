@@ -1,5 +1,5 @@
 'use client'
-export const dynamic = 'force-dynamic'
+
 import { useEffect, useState } from "react"
 import CheckoutSteps from '../../components/checkout-steps/CheckoutSteps'
 import { Label } from "@/components/ui/label"
@@ -106,9 +106,10 @@ function Index() {
       termsOfUse: customerData?.fourthStepData?.termsOfUse || false,
     },
   })
-  const { handleSubmit, formState: { errors }, setValue, setError, clearErrors, control, register, watch } = form
+  const { formState: { errors }, setValue, control, register } = form
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
     const customer = localStorage.getItem('customer')
     if (customer) {
       setCustomerData(JSON.parse(customer))
@@ -117,6 +118,7 @@ function Index() {
   }, [step])
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
     const customer = localStorage.getItem('customer')
     if (customer) {
       setCustomerData(JSON.parse(customer))
@@ -223,7 +225,7 @@ function Index() {
         primaryTel: data.primaryTel,
         secondaryTel: data.secondaryTel,
         termsOfUse: data.termsOfUse,
-        url: window.location.href
+        url: typeof window !== 'undefined' ? window.location.href : ''
       }
       dataToSave = { ...customerData, fourthStepData }
       const isValid = validateStep4(data, form.setError, form.clearErrors)
