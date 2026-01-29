@@ -2,7 +2,7 @@ import HeroTop from '../components/hero/HeroTop'
 import NormalPlans from '../components/menu-plans/NormalPlans'
 import Benefits from '../components/benefits/Benefits'
 
-async function Index({ params }: PersonProp) {
+function Index() {
   return (
     <div>
       <HeroTop />
@@ -45,10 +45,6 @@ async function Index({ params }: PersonProp) {
 
     </div>
   )
-}
-
-type PersonProp = {
-  params: Promise<{ typePerson: string }>
 }
 
 export default Index
